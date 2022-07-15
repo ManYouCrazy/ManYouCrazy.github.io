@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> How to Play </title>
+<script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+<script>
+function start(){
+sjs.open();
+var menu_text = new sjs.Text("How to Play", 28, "blue");
+menu_text.centerH();
+
+var info_text = new sjs.Text("Created By Donovan Wright", 20, "black");
+info_text.bottom().centerH();
+
+var menu_text = new sjs.Text("Arrow keys to move, if you have the power up use the down arrow to shoot.", 28, "orange");
+menu_text.center().offset(0,20);
+
+var menu_text = new sjs.Text("power up --->", 28, "green");
+menu_text.center().offset(-150,-100);
+
+var designBtn = new sjs.Button("back", function(){
+window.location = "index.html";
+});
+designBtn.center().offset(0,100);
+
+var picon = new sjs.Image("Images/power_up.png");
+picon.center().offset(-45,-150);
+picon.setSize(90,120)
+
+}
+</script>
+</head>
+<body onload="start()">
+<h1> How to play </h1>
+
+<div id="target" style="margin:auto;background:grey;"></div>
+</body>
+</html>
+
+
